@@ -22,7 +22,7 @@
   * [Numpy-Scipy](Python/numpy.md)
   * [Ipython](Python/ipython.md)
 * [MySql](MySql/README.md)
-* [PostgreSQL](postgresql.md)
+* [PostgreSQL](PostgreSQL/README.md)
 * [CPlusPlus](Cpp/README.md)
 * [Java](Java/README.md)
 * [Scala](Scala/README.md)
