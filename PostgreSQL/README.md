@@ -29,7 +29,9 @@ $ pg_ctl -D /usr/local/var/postgres start
 
 ### pgAdmin 4 \(free\)
 
-`$ brew cask install pgadmin4`
+```
+$ brew cask install pgadmin4
+```
 
 
 
