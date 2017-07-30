@@ -6,45 +6,59 @@ We'll install `zsh` for all the features offered by `oh-my-zsh`. The installatio
 
 Install zsh and zsh completions using homebrew
 
-    brew install zsh zsh-completions
+```
+brew install zsh zsh-completions
+```
 
 Now you can customize your shell using two frameworks `Prezto` or `Oh My Zsh`. So you should follow one of the two sections below. I personally prefer `Prezto` as that seems to have slightly better performance.
 
 #### Prezto
+
 Install prezto on top of zsh to get additional functionality
 
-    git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+```
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+```
 
 Next create the `~/.zshrc` file by running
 
-    setopt EXTENDED_GLOB
-    for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-      ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-    done
+```
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
+```
 
 edit the `~/.zpreztorc` file and add
 
-    zstyle ':prezto:load' pmodule \
-      'environment' \
-      'terminal' \
-      'editor' \
-      'history' \
-      'directory' \
-      'spectrum' \
-      'utility' \
-      'completion' \
-      'git' \
-      'syntax-highlighting' \
-      'history-substring-search' \
-      'prompt'
+```
+zstyle ':prezto:load' pmodule \
+  'environment' \
+  'terminal' \
+  'editor' \
+  'history' \
+  'directory' \
+  'spectrum' \
+  'utility' \
+  'completion' \
+  'git' \
+  'syntax-highlighting' \
+  'history-substring-search' \
+  'prompt'
 
-    zstyle ':prezto:module:prompt' theme 'paradox'
+zstyle ':prezto:module:prompt' theme 'paradox'
+```
 
 edit the `.zshrc` by opening the file in a text editor and adding the following below
 
-    # Add env.sh
-    source ~/Projects/config/env.sh
+```
+# Add env.sh
+source ~/Projects/config/env.sh
+```
 
+##### Install Theme Powerlevel9k
+
+https://github.com/bhilburn/powerlevel9k/wiki/Install-Instructions\#step-1-install-powerlevel9k
 
 #### Oh My Zsh
 
@@ -52,23 +66,30 @@ edit the `.zshrc` by opening the file in a text editor and adding the following 
 
 Install oh-my-zsh on top of zsh to get additional functionality
 
-    curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+```
+curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+```
 
 if you're still in the default shell, change default shell to zsh manually
 
-    chsh -s /usr/local/bin/zsh
+```
+chsh -s /usr/local/bin/zsh
+```
 
 edit the `.zshrc` by opening the file in a text editor
 
-    ZSH_THEME=pygmalion
+```
+ZSH_THEME=pygmalion
 
-    plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting)
+plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting)
 
-    # Add env.sh
-    source ~/Projects/config/env.sh
+# Add env.sh
+source ~/Projects/config/env.sh
+```
 
 ### env.sh
-~~~
+
+```
 #!/bin/zsh
 
 # PATH
@@ -99,4 +120,7 @@ alias cppcompile='c++ -std=c++11 -stdlib=libc++'
 # Use sublimetext for editing config files
 alias zshconfig="subl ~/.zshrc"
 alias envconfig="subl ~/Projects/config/env.sh"
-~~~
+```
+
+
+
