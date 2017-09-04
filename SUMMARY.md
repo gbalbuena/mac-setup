@@ -44,4 +44,5 @@
   * [Settings](Apps/Settings.md)
 * [Security](Security/README.md)
 * [References](References/README.md)
+* [Commands](commands.md)
 
