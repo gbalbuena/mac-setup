@@ -6,18 +6,23 @@ We'll install `zsh` for all the features offered by `oh-my-zsh`. The installatio
 
 Install zsh and zsh-completions using Homebrew:
 
-    $ brew install zsh zsh-completions
+```
+brew install zsh zsh-completions
+```
 
 At this point you can customize your shell by using one of two frameworks `Prezto` or `Oh My Zsh`. You should follow one of the two sections below.
 
-### Install Prezto
-Install prezto on top of zsh to get additional functionality:
+#### Prezto
 
-    $ git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+Install prezto on top of zsh to get additional functionality
+
+```
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+```
 
 Next create `~/.zshrc` file by running:
 
-```sh
+```
 setopt EXTENDED_GLOB
 for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
@@ -26,7 +31,7 @@ done
 
 Add modules to Prezto by editing `~/.zpreztorc` and adding:
 
-```sh
+```
 zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
@@ -44,33 +49,47 @@ zstyle ':prezto:load' pmodule \
 zstyle ':prezto:module:prompt' theme 'paradox'
 ```
 
-### Install Oh My Zsh
+edit the `.zshrc` by opening the file in a text editor and adding the following below
+
+```
+# Add env.sh
+source ~/Projects/config/env.sh
+```
+
+##### Install Theme Powerlevel9k
+
+https://github.com/bhilburn/powerlevel9k/wiki/Install-Instructions\#step-1-install-powerlevel9k
+
+#### Oh My Zsh
 
 **Note**: You don't need this section if you installed `Prezto`.
 
 Install Oh My Zsh on top of zsh to get additional functionality:
 
-    $ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+```
+curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+```
 
 If you're still in the default shell, change default shell to zsh manually:
 
-    $ chsh -s /usr/local/bin/zsh
+```
+chsh -s /usr/local/bin/zsh
+```
 
 Add plugins (they are all optional but recommended) to Oh My Zsh and use theme by editing `~/.zshrc` and adding:
 
-    ZSH_THEME=pygmalion
-    plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting)
+```
+ZSH_THEME=pygmalion
 
-## env.sh
+plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting)
 
-To include `env.sh`, open `~/.zshrc` and add the following:
-
-```sh
-source ~/<path to file>/env.sh
+# Add env.sh
+source ~/Projects/config/env.sh
 ```
 
-This file comes with some pre-defined settings, **they are all optional**. Please review them before you use them as your configuration.
-~~~
+### env.sh
+
+```
 #!/bin/zsh
 
 # PATH
@@ -100,5 +119,5 @@ alias cppcompile='c++ -std=c++11 -stdlib=libc++'
 
 # Use sublimetext for editing config files
 alias zshconfig="subl ~/.zshrc"
-alias envconfig="subl ~/projects/config/env.sh"
-~~~
+alias envconfig="subl ~/Projects/config/env.sh"
+```
