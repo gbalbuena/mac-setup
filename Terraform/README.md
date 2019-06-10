@@ -4,25 +4,20 @@ HashiCorp Terraform enables you to safely and predictably create, change, and im
 
 ## Installation
 
-```
+```bash
 brew install terraform
 ```
 
 ## Usage
 
-```
+```bash
 terraform init
 ```
 
-```
+```bash
 terraform plan
 ```
 
-```
+```bash
 terraform apply
 ```
-
-
-
-
-
