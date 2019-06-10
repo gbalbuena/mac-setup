@@ -11,7 +11,7 @@ $ brew update
 $ brew install node
 ```
 
-### Using Node Version Manager \(nvm\)
+### Using Node Version Manager (nvm)
 
 Download and install [nvm](https://github.com/creationix/nvm) by running:
 

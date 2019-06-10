@@ -7,7 +7,7 @@
 To install the latest version, use homebrew:
 
 ```bash
-brew install tree
+$ brew install tree
 ```
 
 ## Usage
@@ -42,8 +42,9 @@ Running `tree` will produce output like this:
 To limit the recursion you can pass an `-L` flag and specify the maximum depth `tree` will use when searching.
 
 ```bash
-tree -L 1
+$ tree -L 1
 ```
+
 will output:
 
 ```bash
