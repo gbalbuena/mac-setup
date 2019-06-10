@@ -1,7 +1,9 @@
 # Node.js
+
 Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
 
 ## Installation
+
 ### Using Homebrew
 
 ```
@@ -9,7 +11,8 @@ $ brew update
 $ brew install node
 ```
 
-### Using Node Version Manager (nvm)
+### Using Node Version Manager \(nvm\)
+
 Download and install [nvm](https://github.com/creationix/nvm) by running:
 
 ```
@@ -28,13 +31,13 @@ $ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh |
 #### Install nodejs
 
 ```
-$ source ~/.bashrc # sources your bashrc to add nvm to path
-$ command -v nvm  # check the nvm use message
-$ nvm install node  # install most recent nodejs stable version
-$ nvm ls  # list installed node version
-$ nvm use node  # use stable as current version
-$ nvm ls-remote  # list all the node versions you can install
-$ nvm alias default node  # set the installed stable version as the default node 
+$ source ~/.bashrc        # sources your bashrc to add nvm to path
+$ command -v nvm          # check the nvm use message
+$ nvm install node        # install most recent nodejs stable version
+$ nvm ls                  # list installed node version
+$ nvm use node            # use stable as current version
+$ nvm ls-remote           # list all the node versions you can install
+$ nvm alias default node  # set the installed stable version as the default node
 ```
 
 Node modules are installed locally in the `node_modules` folder of each project by default, but there are at least two that are worth installing globally. Those are [CoffeeScript](http://coffeescript.org/) and [Grunt](http://gruntjs.com/):
@@ -47,6 +50,7 @@ $ npm install -g grunt-cli
 See the [documentation](https://github.com/creationix/nvm#installation) for information.
 
 ## npm usage
+
 To install a package:
 
 ```
@@ -103,7 +107,6 @@ Choose one of the most recent LTS version or your preference and install it with
 
 ```
 $ nvm install 8.2.1
-
 ```
 
 Set this version as the default.
@@ -111,7 +114,6 @@ Set this version as the default.
 ```
 $ nvm use 8.2.1
 $ nvm alias default 8.2.1
-
 ```
 
 Check your node version with
