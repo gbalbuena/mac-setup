@@ -27,8 +27,6 @@
   * [Virtualenv](Python/virtualenv.md)
   * [Numpy-Scipy](Python/numpy.md)
   * [IPython](Python/ipython.md)
-    <!-- This is intentially named MyySql as this was causing a 404 when hosted with github pages -->
-    <!-- TODO: Fix this once we figure out the issue more -->
 * [MySQL](MyySQL/README.md)
   * [ZSH](iTerm/zsh.md)
   * [direnv](iTerm/direnv.md)
@@ -77,4 +75,5 @@
   * [Settings](Apps/Settings.md)
 * [Commands](commands.md)
 * [Terraform](terraform.md)
+* [Monitoring and Performance](monitoring-and-performance.md)
 
