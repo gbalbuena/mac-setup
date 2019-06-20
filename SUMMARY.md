@@ -18,11 +18,9 @@
 * [Git](Git/README.md)
   * [Git Ignore](Git/gitignore.md)
 * [IDE](ide.md)
-* Code Editor
 * [Bash Completion](BashCompletion/README.md)
 * [Code Editor](code-editor.md)
-  * [Emacs](code-editor/emacs.md)
-* [Emacs](Emacs/README.md)
+  * [Emacs](CodeEditor/Emacs/README.md)
 * [Sublime Text](SublimeText/README.md)
   * [Preferences](SublimeText/Preferences.md)
   * [Packages 1/2](SublimeText/Packages.md)
